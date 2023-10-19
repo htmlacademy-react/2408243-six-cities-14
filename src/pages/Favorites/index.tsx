@@ -1,6 +1,6 @@
 import Footer from '../../components/common/Footer';
 import Header from '../../components/common/Header';
-import FavoritesPlace from '../../components/main/Favorites/FavoritesPlace';
+import FavoritesPlace from '../../components/Favorites/FavoritesPlace';
 import { NiceCard, WhiteCastleCard, WoodAndStoneCard } from '../../constants/Cards';
 import FavoritePlaceProps from '../../props/FavoritePlace';
 

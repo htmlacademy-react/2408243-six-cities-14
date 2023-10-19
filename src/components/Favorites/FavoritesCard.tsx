@@ -1,4 +1,4 @@
-import CardProps from '../../../props/FavoriteCardProps';
+import CardProps from '../../props/FavoriteCardProps';
 
 type Card = {
   card: CardProps;

@@ -1,4 +1,4 @@
-import FavoritePlaceProps from '../../../props/FavoritePlace';
+import FavoritePlaceProps from '../../props/FavoritePlace';
 import FavoritesCard from './FavoritesCard';
 
 type Place = {

@@ -1,5 +1,5 @@
 import Header from '../../components/common/Header';
-import CitiesCard from '../../components/main/main/CitiesCard';
+import CitiesCard from '../../components/main/CitiesCard';
 import SettingProps from '../../props/SettingProps';
 
 type MainProps = {
