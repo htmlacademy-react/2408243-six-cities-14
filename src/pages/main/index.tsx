@@ -1,9 +1,9 @@
 import Header from '../../components/common/Header';
 import CitiesCard from '../../components/main/CitiesCard';
-import SettingProps from '../../props/SettingProps';
+import Setting from '../../types/Setting';
 
 type MainProps = {
-    settings: SettingProps;
+    settings: Setting;
 }
 
 function Main({ settings }: MainProps) {

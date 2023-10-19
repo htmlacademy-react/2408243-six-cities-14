@@ -1,9 +1,9 @@
 import Main from '../pages/Main';
-import SettingProps from '../props/SettingProps';
+import Setting from '../types/Setting';
 
 
 type AppProps = {
-  settings: SettingProps;
+  settings: Setting;
 };
 
 export const App = ({settings}: AppProps) => (<Main settings = {settings}></Main>);

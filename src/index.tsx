@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './components/App';
-import SettingProps from './props/SettingProps';
+import Setting from './types/Setting';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-const SETTINGS: SettingProps = {
+const SETTINGS: Setting = {
   offersCount: 3434
 };
 

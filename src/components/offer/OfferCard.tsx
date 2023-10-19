@@ -1,10 +1,10 @@
-import CardProps from '../../props/FavoriteCardProps';
+import Card from '../../types/Card';
 
-type Card = {
-  card: CardProps;
+type OfferCardProps = {
+  card: Card;
 }
 
-const OfferCard = ({ card }: Card) => (
+const OfferCard = ({ card }: OfferCardProps) => (
   <article className="near-places__card place-card">
     <div className="place-card__mark">
       <span>Premium</span>

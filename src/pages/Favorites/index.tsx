@@ -2,14 +2,14 @@ import Footer from '../../components/common/Footer';
 import Header from '../../components/common/Header';
 import FavoritesPlace from '../../components/Favorites/FavoritesPlace';
 import { NiceCard, WhiteCastleCard, WoodAndStoneCard } from '../../constants/Cards';
-import FavoritePlaceProps from '../../props/FavoritePlace';
+import FavoritePlace from '../../types/FavoritePlace';
 
-const Amsterdam: FavoritePlaceProps = {
+const Amsterdam: FavoritePlace = {
   name: 'Amsterdam',
   cards: [NiceCard, WoodAndStoneCard]
 };
 
-const Cologne: FavoritePlaceProps = {
+const Cologne: FavoritePlace = {
   name: 'Cologne',
   cards: [WhiteCastleCard]
 };

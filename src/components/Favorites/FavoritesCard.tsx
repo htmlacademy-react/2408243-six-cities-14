@@ -1,10 +1,10 @@
-import CardProps from '../../props/FavoriteCardProps';
+import Card from '../../types/Card';
 
-type Card = {
-  card: CardProps;
+type FavoritesCardProps = {
+  card: Card;
 }
 
-const FavoritesCard = ({ card }: Card) => (
+const FavoritesCard = ({ card }: FavoritesCardProps) => (
   <article className="favorites__card place-card">
     {card?.mark &&
       <div className="place-card__mark">

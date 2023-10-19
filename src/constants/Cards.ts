@@ -1,6 +1,6 @@
-import CardProps, { MarkCard, TypeCard } from '../props/FavoriteCardProps';
+import Card, { MarkCard, TypeCard } from '../types/Card';
 
-export const NiceCard: CardProps = {
+export const NiceCard: Card = {
   price: 180,
   name: 'Nice, cozy, warm big bed apartment',
   link: '#',
@@ -10,7 +10,7 @@ export const NiceCard: CardProps = {
   rating: 100
 };
 
-export const WoodAndStoneCard: CardProps = {
+export const WoodAndStoneCard: Card = {
   price: 80,
   name: 'Wood and stone place',
   link: '#',
@@ -19,7 +19,7 @@ export const WoodAndStoneCard: CardProps = {
   rating: 80
 };
 
-export const WhiteCastleCard: CardProps = {
+export const WhiteCastleCard: Card = {
   price: 180,
   name: 'White castle',
   link: '#',
@@ -28,7 +28,7 @@ export const WhiteCastleCard: CardProps = {
   rating: 100
 };
 
-export const CanalViewPrinsengrachtCard: CardProps = {
+export const CanalViewPrinsengrachtCard: Card = {
   price: 132,
   name: 'Canal View Prinsengracht',
   link: '#',

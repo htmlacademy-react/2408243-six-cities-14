@@ -1,11 +1,11 @@
-import FavoritePlaceProps from '../../props/FavoritePlace';
+import FavoritePlace from '../../types/FavoritePlace';
 import FavoritesCard from './FavoritesCard';
 
-type Place = {
-  place: FavoritePlaceProps;
+type FavoritePlaceProps = {
+  place: FavoritePlace;
 }
 
-const FavoritesPlace = ({ place }: Place) => (
+const FavoritesPlace = ({ place }: FavoritePlaceProps) => (
   <li className="favorites__locations-items">
     <div className="favorites__locations locations locations--current">
       <div className="locations__item">
