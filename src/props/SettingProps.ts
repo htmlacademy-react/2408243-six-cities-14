@@ -1,3 +1,5 @@
-export type SettingProps = {
-    offersCount: number
+type SettingProps = {
+    offersCount: number;
 }
+
+export default SettingProps;
