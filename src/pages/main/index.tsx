@@ -6,7 +6,6 @@ type MainProps = {
     settings: SettingProps;
 }
 
-export default Main;
 function Main({ settings }: MainProps) {
   return (
     <div className="page page--gray page--main">
@@ -87,3 +86,5 @@ function Main({ settings }: MainProps) {
     </div>
   );
 }
+
+export default Main;
