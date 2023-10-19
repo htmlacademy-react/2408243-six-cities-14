@@ -1,5 +1,5 @@
-import { MarkCard } from '../enums/MarkCardEnum';
-import { TypeCard } from '../enums/TypeCardEnum';
+import MarkCard from '../enums/MarkCardEnum';
+import TypeCard from '../enums/TypeCardEnum';
 
 type Card = {
   price: number;

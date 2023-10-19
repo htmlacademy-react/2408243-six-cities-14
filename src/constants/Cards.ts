@@ -1,4 +1,6 @@
-import Card, { MarkCard, TypeCard } from '../types/Card';
+import MarkCard from '../enums/MarkCardEnum';
+import TypeCard from '../enums/TypeCardEnum';
+import Card from '../types/Card';
 
 export const NiceCard: Card = {
   price: 180,
