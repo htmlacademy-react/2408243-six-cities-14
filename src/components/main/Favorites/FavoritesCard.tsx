@@ -1,7 +1,7 @@
-import FavoriteCardProps from '../../../props/FavoriteCardProps';
+import CardProps from '../../../props/FavoriteCardProps';
 
 type Card = {
-  card: FavoriteCardProps;
+  card: CardProps;
 }
 
 const FavoritesCard = ({ card }: Card) => (

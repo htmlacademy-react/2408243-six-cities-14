@@ -1,8 +1,8 @@
-import FavoriteCardProps from './FavoriteCardProps';
+import CardProps from './FavoriteCardProps';
 
 type FavoritePlaceProps = {
   name: string;
-  cards: FavoriteCardProps[];
+  cards: CardProps[];
 }
 
 export default FavoritePlaceProps;

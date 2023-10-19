@@ -7,7 +7,7 @@ export enum MarkCard {
   Premium = 'Premium'
 }
 
-type FavoriteCardProps = {
+type CardProps = {
   price: number;
   name: string;
   link: string;
@@ -17,4 +17,4 @@ type FavoriteCardProps = {
   rating: number;
 }
 
-export default FavoriteCardProps;
+export default CardProps;
