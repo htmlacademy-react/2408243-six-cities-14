@@ -8,11 +8,11 @@ const FavoritesCard = ({ card }: FavoritesCardProps) => (
   <article className="favorites__card place-card">
     {card?.mark &&
       <div className="place-card__mark">
-        <span>{ card?.mark}</span>
+        <span>{ card?.mark }</span>
       </div>}
     <div className="favorites__image-wrapper place-card__image-wrapper">
       <a href="#">
-        <img className="place-card__image" src={ card.image} width="150" height="110" alt="Place image"/>
+        <img className="place-card__image" src={ card.image } width="150" height="110" alt="Place image"/>
       </a>
     </div>
     <div className="favorites__card-info place-card__info">
