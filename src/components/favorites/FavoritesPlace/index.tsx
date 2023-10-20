@@ -1,5 +1,5 @@
-import FavoritePlace from '../../types/FavoritePlace';
-import FavoritesCard from './FavoritesCard';
+import FavoritePlace from '../../../types/FavoritePlace';
+import FavoritesCard from '../FavoritesCard';
 
 type FavoritePlaceProps = {
   place: FavoritePlace;

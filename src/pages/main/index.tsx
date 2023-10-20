@@ -1,10 +1,19 @@
 import Header from '../../components/common/Header';
 import CitiesCard from '../../components/main/CitiesCard';
+import { BeautifulApartmentCard, CanalViewPrinsengrachtCard, NiceCard, WoodAndStoneCard } from '../../constants/Cards';
 import Setting from '../../types/Setting';
 
 type MainProps = {
     settings: Setting;
 }
+
+const Cards = [
+  BeautifulApartmentCard,
+  WoodAndStoneCard,
+  CanalViewPrinsengrachtCard,
+  NiceCard,
+  WoodAndStoneCard
+];
 
 function Main({ settings }: MainProps) {
   return (
@@ -70,11 +79,7 @@ function Main({ settings }: MainProps) {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                <CitiesCard />
-                <CitiesCard />
-                <CitiesCard />
-                <CitiesCard />
-                <CitiesCard />
+                {Cards.map((card) => <CitiesCard key={card.name} card={card } />)}
               </div>
             </section>
             <div className="cities__right-section">

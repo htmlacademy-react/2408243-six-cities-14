@@ -38,3 +38,12 @@ export const CanalViewPrinsengrachtCard: Card = {
   image: 'img/apartment-02.jpg',
   rating: 100
 };
+
+export const BeautifulApartmentCard: Card = {
+  price: 120,
+  name: 'Beautiful & luxurious apartment at great location',
+  link: '#',
+  type: TypeCard.Apartment,
+  image: 'img/apartment-01.jpg',
+  rating: 80
+};

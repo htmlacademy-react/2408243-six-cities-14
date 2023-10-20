@@ -1,6 +1,6 @@
 import Footer from '../../components/common/Footer';
 import Header from '../../components/common/Header';
-import FavoritesPlace from '../../components/Favorites/FavoritesPlace';
+import FavoritesPlace from '../../components/favorites/FavoritesPlace';
 import { NiceCard, WhiteCastleCard, WoodAndStoneCard } from '../../constants/Cards';
 import FavoritePlace from '../../types/FavoritePlace';
 
@@ -16,8 +16,7 @@ const Cologne: FavoritePlace = {
 
 const Favorites = () => (
   <div className="page">
-    <Header></Header>
-
+    <Header/>
     <main className="page__main page__main--favorites">
       <div className="page__favorites-container container">
         <section className="favorites">
@@ -29,7 +28,7 @@ const Favorites = () => (
         </section>
       </div>
     </main>
-    <Footer></Footer>
+    <Footer/>
   </div>
 );
 
