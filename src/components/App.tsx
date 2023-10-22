@@ -1,4 +1,4 @@
-import Main from '../pages/Main';
+import Main from '../pages/импорты, леат';
 import Setting from '../types/Setting';
 
 
