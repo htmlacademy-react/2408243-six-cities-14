@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { App } from './components/App';
+import Setting from './types/Setting';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+const SETTINGS: Setting = {
+  offersCount: 3434
+};
+
 root.render(
   <React.StrictMode>
-    <h1>Hello, World!</h1>
+    <App settings={SETTINGS} />
   </React.StrictMode>
 );
