@@ -3,7 +3,7 @@ type PageMainProps = {
   content: JSX.Element;
 }
 
-export default function PageMain({className, content} : PageMainProps) {
+export default function Page({className, content} : PageMainProps) {
   return (
     <main className={className}>
       { content }

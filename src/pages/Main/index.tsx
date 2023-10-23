@@ -1,6 +1,6 @@
-import Container from '../../components/common/Container';
+import SectionContainer from '../../components/common/SectionContainer';
 import Header from '../../components/common/Header';
-import PageMain from '../../components/common/Page';
+import Page from '../../components/common/Page';
 import CitiesCard from '../../components/main/CitiesCard';
 import MainMenu from '../../components/main/MainMenu';
 import PlacesSorting from '../../components/main/PlacesSorting';
@@ -26,12 +26,12 @@ function Main({ settings }: MainProps) {
     <div className="page page--gray page--main">
       <Header />
 
-      <PageMain className="page__main page__main--index"
+      <Page className="page__main page__main--index"
         content={
           <>
             <h1 className="visually-hidden">Cities</h1>
             <div className="tabs">
-              <Container className='locations container'
+              <SectionContainer className='locations container'
                 content={<MainMenu activeCity={Amsterdam}/>}
               />
             </div>

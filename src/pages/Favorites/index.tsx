@@ -1,10 +1,10 @@
-import Container from '../../components/common/Container';
 import Footer from '../../components/common/Footer';
 import Header from '../../components/common/Header';
-import PageMain from '../../components/common/Page';
+import Page from '../../components/common/Page';
 import FavoritesPlace from '../../components/favorites/FavoritesPlace';
 import { NiceCard, WhiteCastleCard, WoodAndStoneCard } from '../../constants/Cards';
 import FavoritePlace from '../../types/FavoritePlace';
+import Container from '../../components/common/Container/Container';
 
 const Amsterdam: FavoritePlace = {
   name: 'Amsterdam',
@@ -19,7 +19,7 @@ const Cologne: FavoritePlace = {
 const Favorites = () => (
   <div className="page">
     <Header/>
-    <PageMain
+    <Page
       className="page__main page__main--favorites"
       content={
         <Container
