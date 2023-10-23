@@ -26,7 +26,8 @@ function Main({ settings }: MainProps) {
     <div className="page page--gray page--main">
       <Header />
 
-      <Page className="page__main page__main--index"
+      <Page
+        className="page__main page__main--index"
         content={
           <>
             <h1 className="visually-hidden">Cities</h1>
