@@ -1,12 +1,14 @@
+import { ReactNode } from 'react';
+
 type PageProps = {
   className?: string;
-  content: JSX.Element;
+  children?: ReactNode|ReactNode[];
 }
 
-export default function SectionContainer({className, content} : PageProps) {
+export default function SectionContainer({className, children} : PageProps) {
   return (
     <section className={ className}>
-      { content }
+      { children }
     </section>
   );
 }

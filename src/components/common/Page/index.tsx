@@ -1,12 +1,15 @@
+import { ReactNode } from 'react';
+
 type PageMainProps = {
   className?: string;
-  content: JSX.Element;
+  children?: ReactNode|ReactNode[];
 }
 
-export default function Page({className, content} : PageMainProps) {
+export default function Page({className = '', children} : PageMainProps) {
+  const _cls = ['page__main', className].join(' ');
   return (
-    <main className={className}>
-      { content }
+    <main className={_cls}>
+      { children }
     </main>
   );
 }

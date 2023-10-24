@@ -1,12 +1,15 @@
-type PageProps = {
+import { ReactNode } from 'react';
+
+type ContainerProps = {
   className?: string;
-  content: JSX.Element;
+  children?: ReactNode|ReactNode[];
 }
 
-export default function Container({className, content} : PageProps) {
+export default function Container({ className = '', children }: ContainerProps) {
+  const _cls = ['container', className].join(' ');
   return (
-    <section className={ className}>
-      { content }
+    <section className={ _cls }>
+      { children }
     </section>
   );
 }
