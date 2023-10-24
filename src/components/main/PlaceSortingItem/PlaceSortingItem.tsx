@@ -1,4 +1,4 @@
-import { PlaceSortingEnum } from '../../../enums/PlaceSortingEnum';
+import { PlaceSortingEnum } from '../../../enums';
 
 type PlacesSortingItemProps = {
   isActive?: boolean;
