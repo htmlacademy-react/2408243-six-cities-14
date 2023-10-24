@@ -1,12 +1,7 @@
-import Container from '../../components/common/Container/Container';
-import Header from '../../components/common/Header';
-import Page from '../../components/common/Page';
-import OfferCard from '../../components/offer/OfferCard';
-import OfferGallery from '../../components/offer/OfferGallery';
-import OfferHost from '../../components/offer/OfferHost';
-import OfferInsideRoom from '../../components/offer/OfferInsideRoom';
-import OfferReview from '../../components/offer/OfferReview';
-import { CanalViewPrinsengrachtCard, NiceCard, WoodAndStoneCard } from '../../constants/Cards';
+import { Header, Page, Container } from '../../components/common';
+import { OfferGallery, OfferInsideRoom, OfferHost, OfferReview } from '../../components/offer';
+import OfferCard from '../../components/offer/OfferCard/OfferCard';
+import { CanalViewPrinsengrachtCard, NiceCard, WoodAndStoneCard } from '../../constants';
 
 const images = [
   'img/room.jpg',

@@ -1,16 +1,11 @@
-import Container from '../../components/common/Container/Container';
-import Header from '../../components/common/Header';
-import Page from '../../components/common/Page';
-import SectionContainer from '../../components/common/SectionContainer';
-import CitiesNoPlaces from '../../components/main/CitiesNoPlaces';
-import MainMenu from '../../components/main/MainMenu';
-import { Dusseldorf } from '../../constants/LocationItems';
+import { Container, Header, Page, SectionContainer } from '../../components/common';
+import { MainMenu, CitiesNoPlaces } from '../../components/main';
+import { Dusseldorf } from '../../constants';
 
 const MainEmpty = () =>
   (
     <div className="page page--gray page--main">
-      <Header></Header>
-
+      <Header/>
       <Page className="page__main--index page__main--index-empty">
         <h1 className="visually-hidden">Cities</h1>
         <div className="tabs">

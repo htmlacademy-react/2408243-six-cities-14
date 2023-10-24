@@ -1,6 +1,6 @@
-import Container from '../Container/Container';
-import HeaderLogo from './HeaderLogo';
-import HeaderNav from './HeaderNav';
+import { Container } from '..';
+import HeaderLogo from './HeaderLogo/HeaderLogo';
+import HeaderNav from './HeaderNav/HeaderNav';
 
 type HeaderProps = {
   isActiveNav?: boolean;

@@ -1,10 +1,7 @@
-import Footer from '../../components/common/Footer';
-import Header from '../../components/common/Header';
-import Page from '../../components/common/Page';
-import FavoritesPlace from '../../components/favorites/FavoritesPlace';
-import { NiceCard, WhiteCastleCard, WoodAndStoneCard } from '../../constants/Cards';
-import FavoritePlace from '../../types/FavoritePlace';
-import Container from '../../components/common/Container/Container';
+import { Container, Footer, Header, Page } from '../../components/common';
+import { FavoritesPlace } from '../../components/favorites';
+import { NiceCard, WhiteCastleCard, WoodAndStoneCard } from '../../constants';
+import { FavoritePlace } from '../../types';
 
 const Amsterdam: FavoritePlace = {
   name: 'Amsterdam',

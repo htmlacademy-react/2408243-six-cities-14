@@ -1,5 +1,5 @@
 import Container from '../../common/Container/Container';
-import OfferImage from '../OfferImage';
+import OfferImage from '../OfferImage/OfferImage';
 
 type OfferGalleryProps = {
   images: string[];

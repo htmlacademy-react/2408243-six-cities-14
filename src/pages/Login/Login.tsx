@@ -1,7 +1,5 @@
-import Container from '../../components/common/Container/Container';
-import Header from '../../components/common/Header';
-import Page from '../../components/common/Page';
-import SignIn from '../../components/login/SignIn';
+import { Container, Header, Page } from '../../components/common';
+import { SignIn } from '../../components/login';
 
 const Login = () =>
   (

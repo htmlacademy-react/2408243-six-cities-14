@@ -1,6 +1,6 @@
 import { Amsterdam, Brussels, Cologne, Dusseldorf, Hamburg, Paris } from '../../../constants/LocationItems';
 import LocationItem from '../../../types/LocationItem';
-import MainMenuItem from '../MainMenuItem';
+import MainMenuItem from '../MainMenuItem/MainMenuItem';
 
 type MainMenuProps = {
   activeCity: LocationItem;

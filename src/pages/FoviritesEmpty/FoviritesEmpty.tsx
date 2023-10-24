@@ -1,7 +1,5 @@
-import Container from '../../components/common/Container/Container';
-import Footer from '../../components/common/Footer';
-import Header from '../../components/common/Header';
-import Page from '../../components/common/Page';
+import { Container, Footer, Header, Page } from '../../components/common';
+
 
 const FavoritesEmpty = () =>
   (

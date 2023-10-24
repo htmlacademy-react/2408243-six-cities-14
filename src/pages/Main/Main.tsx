@@ -1,14 +1,8 @@
-import SectionContainer from '../../components/common/SectionContainer';
-import Header from '../../components/common/Header';
-import Page from '../../components/common/Page';
-import CitiesCard from '../../components/main/CitiesCard';
-import MainMenu from '../../components/main/MainMenu';
-import PlacesSorting from '../../components/main/PlacesSorting';
-import { BeautifulApartmentCard, CanalViewPrinsengrachtCard, NiceCard, WoodAndStoneCard } from '../../constants/Cards';
-import { Amsterdam } from '../../constants/LocationItems';
-import { PlaceSortingEnum } from '../../enums/PlaceSortingEnum';
-import Setting from '../../types/Setting';
-import Container from '../../components/common/Container/Container';
+import { Header, Page, SectionContainer, Container } from '../../components/common';
+import { MainMenu, PlacesSorting, CitiesCard } from '../../components/main';
+import { BeautifulApartmentCard, WoodAndStoneCard, CanalViewPrinsengrachtCard, NiceCard, Amsterdam } from '../../constants';
+import { PlaceSortingEnum } from '../../enums';
+import { Setting } from '../../types';
 
 type MainProps = {
     settings: Setting;

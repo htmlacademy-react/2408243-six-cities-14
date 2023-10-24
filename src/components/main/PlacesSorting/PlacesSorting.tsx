@@ -1,5 +1,5 @@
 import { PlaceSortingEnum } from '../../../enums/PlaceSortingEnum';
-import PlaceSortingItem from '../PlaceSortingItem';
+import PlaceSortingItem from '../PlaceSortingItem/PlaceSortingItem';
 
 type PlacesSortingProps = {
   activeSort: PlaceSortingEnum;
