@@ -1,4 +1,4 @@
-import MarkCard from '../enums/MarkCardEnum';
+import { MarkCardEnum } from '../enums';
 import TypeCard from '../enums/TypeCardEnum';
 
 type Card = {
@@ -6,7 +6,7 @@ type Card = {
   name: string;
   link: string;
   type: TypeCard;
-  mark?: MarkCard;
+  mark?: MarkCardEnum;
   image: string;
   rating: number;
 }

@@ -7,12 +7,12 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-const SETTINGS: Setting = {
+const Settings: Setting = {
   offersCount: 3434
 };
 
 root.render(
   <React.StrictMode>
-    <App settings={SETTINGS} />
+    <App settings={Settings} />
   </React.StrictMode>
 );
