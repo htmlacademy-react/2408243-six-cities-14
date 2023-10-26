@@ -7,7 +7,7 @@ type PageProps = {
 
 export default function SectionContainer({className, children} : PageProps) {
   return (
-    <section className={ className}>
+    <section className={ ['container', className].join(' ')}>
       { children }
     </section>
   );

@@ -1,4 +1,4 @@
-import MarkCard from '../enums/MarkCardEnum';
+import MarkCardEnum from '../enums/MarkCardEnum';
 import TypeCard from '../enums/TypeCardEnum';
 import Card from '../types/Card';
 
@@ -7,7 +7,7 @@ export const NiceCard: Card = {
   name: 'Nice, cozy, warm big bed apartment',
   link: '#',
   type: TypeCard.Apartment,
-  mark: MarkCard.Premium,
+  mark: MarkCardEnum.Premium,
   image: 'img/apartment-small-03.jpg',
   rating: 100
 };

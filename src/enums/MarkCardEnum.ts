@@ -1,5 +1,5 @@
-enum MarkCard {
+enum MarkCardEnum {
   Premium = 'Premium'
 }
 
-export default MarkCard;
+export default MarkCardEnum;
