@@ -1,5 +1,5 @@
 type Setting = {
-    offersCount: number;
-}
+  offersCount: number;
+};
 
 export default Setting;

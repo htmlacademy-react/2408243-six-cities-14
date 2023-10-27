@@ -1,4 +1,4 @@
-import MarkCard from '../enums/MarkCardEnum';
+import MarkCardEnum from '../enums/MarkCardEnum';
 import TypeCard from '../enums/TypeCardEnum';
 import Card from '../types/Card';
 
@@ -7,9 +7,9 @@ export const NiceCard: Card = {
   name: 'Nice, cozy, warm big bed apartment',
   link: '#',
   type: TypeCard.Apartment,
-  mark: MarkCard.Premium,
+  mark: MarkCardEnum.Premium,
   image: 'img/apartment-small-03.jpg',
-  rating: 100
+  rating: 100,
 };
 
 export const WoodAndStoneCard: Card = {
@@ -18,7 +18,7 @@ export const WoodAndStoneCard: Card = {
   link: '#',
   type: TypeCard.Room,
   image: 'img/room-small.jpg',
-  rating: 80
+  rating: 80,
 };
 
 export const WhiteCastleCard: Card = {
@@ -27,7 +27,7 @@ export const WhiteCastleCard: Card = {
   link: '#',
   type: TypeCard.Apartment,
   image: 'img/apartment-small-04.jpg',
-  rating: 100
+  rating: 100,
 };
 
 export const CanalViewPrinsengrachtCard: Card = {
@@ -36,7 +36,7 @@ export const CanalViewPrinsengrachtCard: Card = {
   link: '#',
   type: TypeCard.Apartment,
   image: 'img/apartment-02.jpg',
-  rating: 100
+  rating: 100,
 };
 
 export const BeautifulApartmentCard: Card = {
@@ -45,5 +45,5 @@ export const BeautifulApartmentCard: Card = {
   link: '#',
   type: TypeCard.Apartment,
   image: 'img/apartment-01.jpg',
-  rating: 80
+  rating: 80,
 };

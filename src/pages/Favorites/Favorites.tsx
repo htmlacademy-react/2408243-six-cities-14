@@ -5,19 +5,19 @@ import { FavoritePlace } from '../../types';
 
 const Amsterdam: FavoritePlace = {
   name: 'Amsterdam',
-  cards: [NiceCard, WoodAndStoneCard]
+  cards: [NiceCard, WoodAndStoneCard],
 };
 
 const Cologne: FavoritePlace = {
   name: 'Cologne',
-  cards: [WhiteCastleCard]
+  cards: [WhiteCastleCard],
 };
 
 const Favorites = () => (
   <div className="page">
-    <Header isActiveNav/>
+    <Header isActiveNav />
     <Page className="page__main--favorites">
-      <Container className='page__favorites-container'>
+      <Container className="page__favorites-container">
         <section className="favorites">
           <h1 className="favorites__title">Saved listing</h1>
           <ul className="favorites__list">
@@ -27,7 +27,7 @@ const Favorites = () => (
         </section>
       </Container>
     </Page>
-    <Footer/>
+    <Footer />
   </div>
 );
 

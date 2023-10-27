@@ -1,10 +1,17 @@
-import { Amsterdam, Brussels, Cologne, Dusseldorf, Hamburg, Paris } from '../../../constants/LocationItems';
+import {
+  Amsterdam,
+  Brussels,
+  Cologne,
+  Dusseldorf,
+  Hamburg,
+  Paris,
+} from '../../../constants/LocationItems';
 import LocationItem from '../../../types/LocationItem';
 import MainMenuItem from '../MainMenuItem/MainMenuItem';
 
 type MainMenuProps = {
   activeCity: LocationItem;
-}
+};
 
 const Cities: LocationItem[] = [
   Paris,
@@ -12,15 +19,19 @@ const Cities: LocationItem[] = [
   Brussels,
   Amsterdam,
   Hamburg,
-  Dusseldorf
+  Dusseldorf,
 ];
 
 export default function MainMenu({ activeCity }: MainMenuProps) {
   return (
     <ul className="locations__list tabs__list">
-      {
-        Cities.map((city) => <MainMenuItem key={city.name} city={city} isActive={city === activeCity} />)
-      }
+      {Cities.map((city) => (
+        <MainMenuItem
+          key={city.name}
+          city={city}
+          isActive={city === activeCity}
+        />
+      ))}
     </ul>
   );
 }

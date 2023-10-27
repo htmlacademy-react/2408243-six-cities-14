@@ -9,6 +9,6 @@ type Card = {
   mark?: MarkCardEnum;
   image: string;
   rating: number;
-}
+};
 
 export default Card;

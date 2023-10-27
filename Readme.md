@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
-* Студент: [Дмитрий Тюнегов](https://up.htmlacademy.ru/react/14/user/2408243).
-* Наставник: [Роман Усков](https://htmlacademy.ru/profile/id1019285).
+- Студент: [Дмитрий Тюнегов](https://up.htmlacademy.ru/react/14/user/2408243).
+- Наставник: [Роман Усков](https://htmlacademy.ru/profile/id1019285).
 
 ---
 
