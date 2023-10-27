@@ -6,20 +6,22 @@ export default function SignIn() {
       <h1 className="login__title">Sign in</h1>
       <form className="login__form form" action="#" method="post">
         <LoginInput
-          title='E-main'
-          type='email'
-          name='email'
-          placeholder='Email'
+          title="E-main"
+          type="email"
+          name="email"
+          placeholder="Email"
           isRequired
         />
         <LoginInput
-          title='Password'
-          type='password'
-          name='password'
-          placeholder='Password'
+          title="Password"
+          type="password"
+          name="password"
+          placeholder="Password"
           isRequired
         />
-        <button className="login__submit form__submit button" type="submit">Sign in</button>
+        <button className="login__submit form__submit button" type="submit">
+          Sign in
+        </button>
       </form>
     </section>
   );

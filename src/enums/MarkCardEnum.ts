@@ -1,5 +1,5 @@
 enum MarkCardEnum {
-  Premium = 'Premium'
+  Premium = 'Premium',
 }
 
 export default MarkCardEnum;

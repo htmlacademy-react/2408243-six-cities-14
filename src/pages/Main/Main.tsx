@@ -1,19 +1,30 @@
-import { Header, Page, SectionContainer, Container } from '../../components/common';
+import {
+  Header,
+  Page,
+  SectionContainer,
+  Container,
+} from '../../components/common';
 import { MainMenu, PlacesSorting, CitiesCard } from '../../components/main';
-import { BeautifulApartmentCard, WoodAndStoneCard, CanalViewPrinsengrachtCard, NiceCard, Amsterdam } from '../../constants';
+import {
+  BeautifulApartmentCard,
+  WoodAndStoneCard,
+  CanalViewPrinsengrachtCard,
+  NiceCard,
+  Amsterdam,
+} from '../../constants';
 import { PlaceSortingEnum } from '../../enums';
 import { Setting } from '../../types';
 
 type MainProps = {
-    settings: Setting;
-}
+  settings: Setting;
+};
 
 const Cards = [
   BeautifulApartmentCard,
   WoodAndStoneCard,
   CanalViewPrinsengrachtCard,
   NiceCard,
-  WoodAndStoneCard
+  WoodAndStoneCard,
 ];
 
 function Main({ settings }: MainProps) {
@@ -23,7 +34,7 @@ function Main({ settings }: MainProps) {
       <Page className="page__main--index">
         <h1 className="visually-hidden">Cities</h1>
         <div className="tabs">
-          <SectionContainer className='locations'>
+          <SectionContainer className="locations">
             <MainMenu activeCity={Amsterdam} />
           </SectionContainer>
         </div>
@@ -31,10 +42,14 @@ function Main({ settings }: MainProps) {
           <Container className="cities__places-container">
             <section className="cities__places places">
               <h2 className="visually-hidden">Places</h2>
-              <b className="places__found">{settings.offersCount} places to stay in Amsterdam</b>
-              <PlacesSorting activeSort={PlaceSortingEnum.Popular}/>
+              <b className="places__found">
+                {settings.offersCount} places to stay in Amsterdam
+              </b>
+              <PlacesSorting activeSort={PlaceSortingEnum.Popular} />
               <div className="cities__places-list places__list tabs__content">
-                {Cards.map((card) => <CitiesCard key={card.name} card={card} />)}
+                {Cards.map((card) => (
+                  <CitiesCard key={card.name} card={card} />
+                ))}
               </div>
             </section>
             <div className="cities__right-section">

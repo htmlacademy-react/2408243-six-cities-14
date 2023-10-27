@@ -2,13 +2,11 @@ import { ReactNode } from 'react';
 
 type PageProps = {
   className?: string;
-  children?: ReactNode|ReactNode[];
-}
+  children?: ReactNode | ReactNode[];
+};
 
-export default function SectionContainer({className, children} : PageProps) {
+export default function SectionContainer({ className, children }: PageProps) {
   return (
-    <section className={ ['container', className].join(' ')}>
-      { children }
-    </section>
+    <section className={['container', className].join(' ')}>{children}</section>
   );
 }

@@ -1,6 +1,6 @@
 enum TypeCard {
   Apartment = 'Apartment',
-  Room = 'Room'
+  Room = 'Room',
 }
 
 export default TypeCard;

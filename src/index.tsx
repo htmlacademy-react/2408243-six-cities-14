@@ -8,7 +8,7 @@ const root = ReactDOM.createRoot(
 );
 
 const Settings: Setting = {
-  offersCount: 3434
+  offersCount: 3434,
 };
 
 root.render(

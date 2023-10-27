@@ -1,7 +1,7 @@
 const OfferReview = () => (
   <section className="offer__reviews reviews">
     <h2 className="reviews__title">
-                    Reviews · <span className="reviews__amount">1</span>
+      Reviews · <span className="reviews__amount">1</span>
     </h2>
     <ul className="reviews__list">
       <li className="reviews__item">
@@ -25,19 +25,19 @@ const OfferReview = () => (
             </div>
           </div>
           <p className="reviews__text">
-                          A quiet cozy and picturesque that hides behind a a river by
-                          the unique lightness of Amsterdam. The building is green and
-                          from 18th century.
+            A quiet cozy and picturesque that hides behind a a river by the
+            unique lightness of Amsterdam. The building is green and from 18th
+            century.
           </p>
           <time className="reviews__time" dateTime="2019-04-24">
-                          April 2019
+            April 2019
           </time>
         </div>
       </li>
     </ul>
     <form className="reviews__form form" action="#" method="post">
       <label className="reviews__label form__label" htmlFor="review">
-                      Your review
+        Your review
       </label>
       <div className="reviews__rating-form form__rating">
         <input
@@ -126,24 +126,24 @@ const OfferReview = () => (
         id="review"
         name="review"
         placeholder="Tell how was your stay, what you like and what can be improved"
-        defaultValue=''
+        defaultValue=""
       />
       <div className="reviews__button-wrapper">
         <p className="reviews__help">
-                        To submit review please make sure to set{' '}
-          <span className="reviews__star">rating</span> and describe
-                        your stay with at least{' '}
-          <b className="reviews__text-amount">50 characters</b>.
+          To submit review please make sure to set{' '}
+          <span className="reviews__star">rating</span> and describe your stay
+          with at least <b className="reviews__text-amount">50 characters</b>.
         </p>
         <button
           className="reviews__submit form__submit button"
           type="submit"
           disabled
         >
-                        Submit
+          Submit
         </button>
       </div>
     </form>
-  </section>);
+  </section>
+);
 
 export default OfferReview;
