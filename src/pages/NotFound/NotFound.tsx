@@ -1,7 +1,4 @@
-import {
-  Header,
-  Page,
-} from '../../components/common';
+import { Header, Page } from '../../components/common';
 
 const MainEmpty = () => (
   <div className="page page--gray page--main">
