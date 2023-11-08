@@ -118,8 +118,7 @@ function FormSendComment(): JSX.Element {
           setStateComment({
             ...sateComment,
             comment: evt.target.value,
-          })
-        }
+          })}
       />
       <div className="reviews__button-wrapper">
         <p className="reviews__help">
