@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Header,
   Page,
@@ -5,29 +6,22 @@ import {
   Container,
 } from '../../components/common';
 import { MainMenu, PlacesSorting, CitiesCard } from '../../components/main';
-import {
-  BeautifulApartmentCard,
-  WoodAndStoneCard,
-  CanalViewPrinsengrachtCard,
-  NiceCard,
-  Amsterdam,
-} from '../../constants';
+import { Amsterdam } from '../../constants';
 import { PlaceSortingEnum } from '../../enums';
-import { Setting } from '../../types';
+import { OfferType, Setting } from '../../types';
 
 type MainProps = {
+  offers: OfferType[];
   settings: Setting;
 };
 
-const Cards = [
-  BeautifulApartmentCard,
-  WoodAndStoneCard,
-  CanalViewPrinsengrachtCard,
-  NiceCard,
-  WoodAndStoneCard,
-];
+function Main({ settings, offers }: MainProps) {
 
-function Main({ settings }: MainProps) {
+  const [selectedOfferCardId, setSelectedOfferCardId] = useState<number | null>(null);
+
+  function handleMouseMove(offerId: number | null){
+    setSelectedOfferCardId(offerId);
+  }
   return (
     <div className="page page--gray page--main">
       <Header />
@@ -47,13 +41,13 @@ function Main({ settings }: MainProps) {
               </b>
               <PlacesSorting activeSort={PlaceSortingEnum.Popular} />
               <div className="cities__places-list places__list tabs__content">
-                {Cards.map((card) => (
-                  <CitiesCard key={card.name} card={card} />
+                {offers.map((offer) => (
+                  <CitiesCard key={offer.id} offer={offer} cardHover={handleMouseMove}/>
                 ))}
               </div>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"></section>
+              <section className="cities__map map">{selectedOfferCardId}</section>
             </div>
           </Container>
         </div>
