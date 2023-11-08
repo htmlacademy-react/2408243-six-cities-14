@@ -1,32 +1,31 @@
-import { useState } from 'react';
-import { Form } from 'react-router-dom';
+import {useState} from 'react';
 
 type CommentState = {
   comment: string;
   ratingOffer: string;
 };
 
-function FormSendComment(): JSX.Element {
-  const [stateComment, setStateComment] = useState<CommentState>({
+
+function FormSendComment (): JSX.Element {
+
+  const [sateComment, setStateComment] = useState<CommentState>({
     comment: '',
-    ratingOffer: '',
+    ratingOffer: ''
   });
 
   return (
-    <Form className="reviews__form form" action="#" method="post">
+    <form className="reviews__form form" action="#" method="post">
       <label className="reviews__label form__label" htmlFor="review">
         Your review
       </label>
-      <div
-        className="reviews__rating-form form__rating"
-        onChange={(evt) => {
-          if (evt.target instanceof HTMLInputElement) {
-            setStateComment({
-              ...stateComment,
-              ratingOffer: evt.target.defaultValue,
-            });
-          }
-        }}
+      <div className="reviews__rating-form form__rating" onChange={(evt) => {
+        if (evt.target instanceof HTMLInputElement) {
+          setStateComment({
+            ...sateComment,
+            ratingOffer: evt.target.defaultValue
+          });
+        }
+      }}
       >
         <input
           className="form__rating-input visually-hidden"
@@ -115,18 +114,16 @@ function FormSendComment(): JSX.Element {
         name="review"
         placeholder="Tell how was your stay, what you like and what can be improved"
         defaultValue={''}
-        onChange={(evt) =>
-          setStateComment({
-            ...stateComment,
-            comment: evt.target.value,
-          })
-        }
+        onChange= {(evt) => setStateComment({
+          ...sateComment,
+          comment: evt.target.value
+        })}
       />
       <div className="reviews__button-wrapper">
         <p className="reviews__help">
           To submit review please make sure to set{''}
-          <span className="reviews__star">rating</span> and describe your stay
-          with at least{''}
+          <span className="reviews__star">rating</span> and describe
+          your stay with at least{''}
           <b className="reviews__text-amount">50 characters</b>.
         </p>
         <button
@@ -137,8 +134,9 @@ function FormSendComment(): JSX.Element {
           Submit
         </button>
       </div>
-    </Form>
+    </form>
   );
 }
+
 
 export default FormSendComment;
