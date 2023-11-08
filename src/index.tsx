@@ -12,9 +12,8 @@ const Settings: Setting = {
   offersCount: 3434,
 };
 
-
 root.render(
   <React.StrictMode>
-    <App settings={Settings} offers={offers}/>
+    <App settings={Settings} offers={offers} />
   </React.StrictMode>
 );

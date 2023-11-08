@@ -17,7 +17,7 @@ export const App = ({ settings, offers }: AppProps) => (
         <Route
           index
           path={Routers.Main}
-          element={<Main settings={settings} offers={offers}/>}
+          element={<Main settings={settings} offers={offers} />}
         />
         <Route
           path={Routers.Favorites}
@@ -26,7 +26,7 @@ export const App = ({ settings, offers }: AppProps) => (
               authorizationStatus={AuthorizationStatus.NoAuth}
               redirectTo={Routers.Login}
             >
-              <Favorites offers={offers}/>
+              <Favorites offers={offers} />
             </ProtectedRoute>
           }
         />

@@ -3,10 +3,12 @@ import { OfferType } from '../../../types';
 
 type FavoriteListProps = {
   favoriteOffers: OfferType[];
-}
+};
 
 function FavoriteList({ favoriteOffers }: FavoriteListProps): JSX.Element {
-  const CitiesList = [...new Set(favoriteOffers.map((offer) => offer.city.name))].sort();
+  const CitiesList = [
+    ...new Set(favoriteOffers.map((offer) => offer.city.name)),
+  ].sort();
 
   return (
     <ul className="favorites__list">

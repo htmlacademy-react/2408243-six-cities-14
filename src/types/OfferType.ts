@@ -17,6 +17,6 @@ type OfferType = {
   description: string;
   location: Location;
   id: number;
-}
+};
 
 export default OfferType;

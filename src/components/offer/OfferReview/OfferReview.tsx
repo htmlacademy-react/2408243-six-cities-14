@@ -37,7 +37,7 @@ const OfferReview = () => (
         </div>
       </li>
     </ul>
-    <ReviewForm/>
+    <ReviewForm />
   </section>
 );
 

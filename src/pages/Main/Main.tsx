@@ -16,10 +16,11 @@ type MainProps = {
 };
 
 function Main({ settings, offers }: MainProps) {
+  const [selectedOfferCardId, setSelectedOfferCardId] = useState<number | null>(
+    null
+  );
 
-  const [selectedOfferCardId, setSelectedOfferCardId] = useState<number | null>(null);
-
-  function handleMouseMove(offerId: number | null){
+  function handleMouseMove(offerId: number | null) {
     setSelectedOfferCardId(offerId);
   }
   return (
@@ -42,12 +43,18 @@ function Main({ settings, offers }: MainProps) {
               <PlacesSorting activeSort={PlaceSortingEnum.Popular} />
               <div className="cities__places-list places__list tabs__content">
                 {offers.map((offer) => (
-                  <CitiesCard key={offer.id} offer={offer} cardHover={handleMouseMove}/>
+                  <CitiesCard
+                    key={offer.id}
+                    offer={offer}
+                    cardHover={handleMouseMove}
+                  />
                 ))}
               </div>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map">{selectedOfferCardId}</section>
+              <section className="cities__map map">
+                {selectedOfferCardId}
+              </section>
             </div>
           </Container>
         </div>

@@ -1,12 +1,12 @@
 import { Container, Footer, Header, Page } from '../../components/common';
-import {OfferType } from '../../types';
+import { OfferType } from '../../types';
 import { FavoriteList } from '../../components/favorites';
 
 type FavoritesProps = {
   offers: OfferType[];
-}
+};
 
-const Favorites = ({offers}: FavoritesProps) => {
+const Favorites = ({ offers }: FavoritesProps) => {
   function getFavoritesOffers(): OfferType[] {
     return offers.filter((offer) => offer.isFavorite === true);
   }
@@ -23,7 +23,8 @@ const Favorites = ({offers}: FavoritesProps) => {
         </Container>
       </Page>
       <Footer />
-    </div>);
+    </div>
+  );
 };
 
 export default Favorites;
