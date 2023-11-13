@@ -11,7 +11,7 @@ function ReviewForm() {
     ratingOffer: '',
   });
 
-  const changeRating = (evt:HTMLInputElement) => {
+  const changeRating = (evt: HTMLInputElement) => {
     setStateComment({
       ...stateComment,
       ratingOffer: evt.defaultValue,
@@ -24,7 +24,6 @@ function ReviewForm() {
       comment: value,
     });
   };
-
 
   return (
     <form className="reviews__form form" action="#" method="post">

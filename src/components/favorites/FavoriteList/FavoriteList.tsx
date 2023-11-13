@@ -22,10 +22,11 @@ function FavoriteList({ favoriteOffers }: FavoriteListProps): JSX.Element {
             </div>
           </div>
           <div className="favorites__places">
-            {favoriteOffers
-              .map((offer) => (
-                offer.city.name === city ? <FavoritesCard offer={offer} key={offer.id} /> : null
-              ))}
+            {favoriteOffers.map((offer) =>
+              offer.city.name === city ? (
+                <FavoritesCard offer={offer} key={offer.id} />
+              ) : null
+            )}
           </div>
         </li>
       ))}
