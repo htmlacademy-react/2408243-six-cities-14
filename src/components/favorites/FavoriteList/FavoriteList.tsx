@@ -23,9 +23,8 @@ function FavoriteList({ favoriteOffers }: FavoriteListProps): JSX.Element {
           </div>
           <div className="favorites__places">
             {favoriteOffers
-              .filter((offer) => offer.city.name === city)
               .map((offer) => (
-                <FavoritesCard offer={offer} key={offer.id} />
+                offer.city.name === city ? <FavoritesCard offer={offer} key={offer.id} /> : null
               ))}
           </div>
         </li>

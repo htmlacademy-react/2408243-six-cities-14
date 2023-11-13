@@ -7,9 +7,7 @@ type FavoritesProps = {
 };
 
 const Favorites = ({ offers }: FavoritesProps) => {
-  function getFavoritesOffers(): OfferType[] {
-    return offers.filter((offer) => offer.isFavorite === true);
-  }
+  const favoritesOffers = offers.filter((offer) => offer.isFavorite === true);
 
   return (
     <div className="page">
@@ -18,7 +16,7 @@ const Favorites = ({ offers }: FavoritesProps) => {
         <Container className="page__favorites-container">
           <section className="favorites">
             <h1 className="favorites__title">Saved listing</h1>
-            <FavoriteList favoriteOffers={getFavoritesOffers()}></FavoriteList>
+            <FavoriteList favoriteOffers={favoritesOffers}></FavoriteList>
           </section>
         </Container>
       </Page>

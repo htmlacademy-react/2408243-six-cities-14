@@ -5,11 +5,26 @@ type CommentState = {
   ratingOffer: string;
 };
 
-function FormSendComment(): JSX.Element {
-  const [sateComment, setStateComment] = useState<CommentState>({
+function ReviewForm() {
+  const [stateComment, setStateComment] = useState<CommentState>({
     comment: '',
     ratingOffer: '',
   });
+
+  const changeRating = (evt:HTMLInputElement) => {
+    setStateComment({
+      ...stateComment,
+      ratingOffer: evt.defaultValue,
+    });
+  };
+
+  const changeComment = (value: string) => {
+    setStateComment({
+      ...stateComment,
+      comment: value,
+    });
+  };
+
 
   return (
     <form className="reviews__form form" action="#" method="post">
@@ -19,12 +34,7 @@ function FormSendComment(): JSX.Element {
       <div
         className="reviews__rating-form form__rating"
         onChange={(evt) => {
-          if (evt.target instanceof HTMLInputElement) {
-            setStateComment({
-              ...sateComment,
-              ratingOffer: evt.target.defaultValue,
-            });
-          }
+          changeRating(evt.target as HTMLInputElement);
         }}
       >
         <input
@@ -114,11 +124,9 @@ function FormSendComment(): JSX.Element {
         name="review"
         placeholder="Tell how was your stay, what you like and what can be improved"
         defaultValue={''}
-        onChange={(evt) =>
-          setStateComment({
-            ...sateComment,
-            comment: evt.target.value,
-          })}
+        onChange={(evt) => {
+          changeComment(evt.target.value);
+        }}
       />
       <div className="reviews__button-wrapper">
         <p className="reviews__help">
@@ -139,4 +147,4 @@ function FormSendComment(): JSX.Element {
   );
 }
 
-export default FormSendComment;
+export default ReviewForm;
