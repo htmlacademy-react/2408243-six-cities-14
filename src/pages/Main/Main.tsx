@@ -4,11 +4,13 @@ import {
   Page,
   SectionContainer,
   Container,
+  Map,
 } from '../../components/common';
 import { MainMenu, PlacesSorting, CitiesCard } from '../../components/main';
 import { Amsterdam } from '../../constants';
 import { PlaceSortingEnum } from '../../enums';
 import { OfferType, Setting } from '../../types';
+import { city } from '../../mocks/cityMap';
 
 type MainProps = {
   offers: OfferType[];
@@ -52,9 +54,14 @@ function Main({ settings, offers }: MainProps) {
               </div>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map">
+              {/* <section className="cities__map map">
                 {selectedOfferCardId}
-              </section>
+              </section> */}
+              <Map
+                city={city}
+                offers={offers}
+                hoveredOfferId={selectedOfferCardId}
+              />
             </div>
           </Container>
         </div>
