@@ -7,3 +7,4 @@ export type { default as LocationType } from './LocationType';
 export type { default as User } from './User';
 export type { default as OfferType } from './OfferType';
 export type { default as CityMapType } from './CityMapType';
+export type { default as ReviewType } from './ReviewType';
