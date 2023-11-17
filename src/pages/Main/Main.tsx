@@ -55,7 +55,7 @@ function Main({ settings, offers }: MainProps) {
             </section>
             <div className="cities__right-section">
               <Map
-                className='cities__map'
+                className="cities__map"
                 city={city}
                 offers={offers}
                 hoveredOfferId={selectedOfferCardId}

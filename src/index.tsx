@@ -15,6 +15,6 @@ const Settings: Setting = {
 
 root.render(
   <React.StrictMode>
-    <App settings={Settings} offers={offers} reviews={reviews}/>
+    <App settings={Settings} offers={offers} reviews={reviews} />
   </React.StrictMode>
 );

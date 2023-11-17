@@ -2,10 +2,13 @@ import { ReviewType } from '../../../types';
 
 type OfferReviewItemProps = {
   review: ReviewType;
-}
+};
 
-function OfferReviewItem({review}: OfferReviewItemProps) {
-  const reviewDate = new Date(review.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+function OfferReviewItem({ review }: OfferReviewItemProps) {
+  const reviewDate = new Date(review.date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+  });
 
   return (
     <li className="reviews__item">
@@ -26,8 +29,7 @@ function OfferReviewItem({review}: OfferReviewItemProps) {
           <div className="reviews__stars rating__stars">
             <span
               style={{ width: `${Math.round(review.rating) * 20}%` }}
-            >
-            </span>
+            ></span>
             <span className="visually-hidden">Rating</span>
           </div>
         </div>
@@ -36,7 +38,8 @@ function OfferReviewItem({review}: OfferReviewItemProps) {
           {reviewDate}
         </time>
       </div>
-    </li>);
+    </li>
+  );
 }
 
 export default OfferReviewItem;

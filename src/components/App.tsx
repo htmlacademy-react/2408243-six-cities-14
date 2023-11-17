@@ -42,7 +42,10 @@ export const App = ({ settings, offers, reviews }: AppProps) => (
             </ProtectedRoute>
           }
         />
-        <Route path={Routers.Offer} element={<Offer offers={offers} reviews={reviews}/>} />
+        <Route
+          path={Routers.Offer}
+          element={<Offer offers={offers} reviews={reviews} />}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

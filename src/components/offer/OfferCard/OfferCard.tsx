@@ -57,13 +57,14 @@ function OfferCard({ card, offerHover: cardHover }: OfferCardProps) {
         </div>
         <Link
           className="header__nav-link header__nav-link--profile"
-          to={`${Routers.Favorites}/${ card.id}`}
+          to={`${Routers.Favorites}/${card.id}`}
         >
-          <h2 className="place-card__name"/>
+          <h2 className="place-card__name" />
         </Link>
         <p className="place-card__type">{card.type}</p>
       </div>
-    </article>);
+    </article>
+  );
 }
 
 export default OfferCard;

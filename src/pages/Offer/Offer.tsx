@@ -19,11 +19,11 @@ function Offer({ offers, reviews }: OfferProps) {
   const { id } = useParams();
   const offer = offers.find((item) => item.id === Number(id));
 
-  const notFavoriteOffers = offers.filter((otherOffer) => otherOffer.id !== offer?.id);
-
-  const [selectedOfferId, setSelectedOfferId] = useState<number | null>(
-    null
+  const notFavoriteOffers = offers.filter(
+    (otherOffer) => otherOffer.id !== offer?.id
   );
+
+  const [selectedOfferId, setSelectedOfferId] = useState<number | null>(null);
 
   function handleMouseMove(offerId: number | null) {
     setSelectedOfferId(offerId);
@@ -37,14 +37,13 @@ function Offer({ offers, reviews }: OfferProps) {
           <OfferGallery images={offer!.images} />
           <Container className="offer__container">
             <div className="offer__wrapper">
-              {offer?.isPremium &&
-              <div className="offer__mark">
-                <span>Premium</span>
-              </div>}
+              {offer?.isPremium && (
+                <div className="offer__mark">
+                  <span>Premium</span>
+                </div>
+              )}
               <div className="offer__name-wrapper">
-                <h1 className="offer__name">
-                  {offer?.title}
-                </h1>
+                <h1 className="offer__name">{offer?.title}</h1>
                 <button className="offer__bookmark-button button" type="button">
                   <svg className="offer__bookmark-icon" width={31} height={33}>
                     <use xlinkHref="#icon-bookmark" />
@@ -57,17 +56,19 @@ function Offer({ offers, reviews }: OfferProps) {
                   <span style={{ width: '80%' }} />
                   <span className="visually-hidden">Rating</span>
                 </div>
-                <span className="offer__rating-value rating__value">{offer!.rating}</span>
+                <span className="offer__rating-value rating__value">
+                  {offer!.rating}
+                </span>
               </div>
               <ul className="offer__features">
                 <li className="offer__feature offer__feature--entire">
-                Apartment
+                  Apartment
                 </li>
                 <li className="offer__feature offer__feature--bedrooms">
-                3 Bedrooms
+                  3 Bedrooms
                 </li>
                 <li className="offer__feature offer__feature--adults">
-                Max 4 adults
+                  Max 4 adults
                 </li>
               </ul>
               <div className="offer__price">
@@ -76,11 +77,11 @@ function Offer({ offers, reviews }: OfferProps) {
               </div>
               <OfferInsideRoom insideList={offer?.goods ?? []} />
               <OfferHost />
-              <OfferReview reviews={reviews}/>
+              <OfferReview reviews={reviews} />
             </div>
           </Container>
           <Map
-            className='offer__map'
+            className="offer__map"
             city={offer!.city.location}
             offers={offers}
             hoveredOfferId={selectedOfferId}
@@ -88,11 +89,15 @@ function Offer({ offers, reviews }: OfferProps) {
           <Container>
             <section className="near-places places">
               <h2 className="near-places__title">
-            Other places in the neighbourhood
+                Other places in the neighbourhood
               </h2>
               <div className="near-places__list places__list">
                 {notFavoriteOffers.map((offerCard) => (
-                  <OfferCard key={offerCard.id} card={offerCard} offerHover={handleMouseMove}/>
+                  <OfferCard
+                    key={offerCard.id}
+                    card={offerCard}
+                    offerHover={handleMouseMove}
+                  />
                 ))}
               </div>
             </section>

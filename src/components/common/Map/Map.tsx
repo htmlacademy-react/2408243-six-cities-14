@@ -12,7 +12,7 @@ type MapProps = {
   hoveredOfferId: OfferType['id'] | null;
 };
 
-function Map({className, city, offers, hoveredOfferId }: MapProps) {
+function Map({ className, city, offers, hoveredOfferId }: MapProps) {
   const mapRef = useRef(null);
   const map = useMap(mapRef, city);
 
