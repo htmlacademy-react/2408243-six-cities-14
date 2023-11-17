@@ -1,4 +1,4 @@
-import { City, User, Location } from '.';
+import { City, LocationType, User } from '.';
 
 type OfferType = {
   city: City;
@@ -15,7 +15,7 @@ type OfferType = {
   goods: string[];
   host: User;
   description: string;
-  location: Location;
+  location: LocationType;
   id: number;
 };
 

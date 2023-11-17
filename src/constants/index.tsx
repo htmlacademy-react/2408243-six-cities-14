@@ -13,3 +13,4 @@ export {
   Hamburg,
   Dusseldorf,
 } from './LocationItems';
+export { DefaultIcon, HoverIcon } from './IconMap';

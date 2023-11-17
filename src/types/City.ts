@@ -1,8 +1,8 @@
-import { Location } from '.';
+import { LocationType } from '.';
 
 type City = {
   name: string;
-  location: Location;
+  location: LocationType;
 };
 
 export default City;
