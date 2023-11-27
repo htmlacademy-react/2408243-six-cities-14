@@ -8,16 +8,11 @@ import {
 } from '../../components/common';
 import { MainMenu, PlacesSorting, CitiesCard } from '../../components/main';
 import { Amsterdam } from '../../constants';
-import { PlaceSortingEnum } from '../../enums';
-import { OfferType, Setting } from '../../types';
+import { OfferType } from '../../types';
 import { city } from '../../mocks/cityMap';
+import { selectSortingParameter, useAppSelector } from '../../store';
 
-type MainProps = {
-  offers: OfferType[];
-  settings: Setting;
-};
-
-function Main({ settings, offers }: MainProps) {
+function Main() {
   const [selectedOfferCardId, setSelectedOfferCardId] = useState<number | null>(
     null
   );
@@ -25,6 +20,21 @@ function Main({ settings, offers }: MainProps) {
   function handleMouseMove(offerId: number | null) {
     setSelectedOfferCardId(offerId);
   }
+
+  const currentCity = useAppSelector((store) => store.currentCity);
+  const currentSortOption = useAppSelector((store) => store.placeSorting);
+  const currentCityOffers : OfferType[] = useAppSelector((store) => store.offers.filter((offer) => offer.city.name === currentCity));
+
+  //TODO: требуется куда-то вынести
+  const sortingVariants : {[key:string]: OfferType[]} = {
+    'Popular': currentCityOffers,
+    'Price: low to high': [...currentCityOffers].sort((a, b) => a.price - b.price),
+    'Price: high to low': [...currentCityOffers].sort((a, b) => b.price - a.price),
+    'Top rated first': [...currentCityOffers].sort((a, b) => b.rating - a.rating),
+  };
+  const sortedOffers = sortingVariants[currentSortOption];
+
+  //TODO: вынести список городов
   return (
     <div className="page page--gray page--main">
       <Header />
@@ -40,11 +50,11 @@ function Main({ settings, offers }: MainProps) {
             <section className="cities__places places">
               <h2 className="visually-hidden">Places</h2>
               <b className="places__found">
-                {settings.offersCount} places to stay in Amsterdam
+                {currentCityOffers.length} places to stay in {currentCity}
               </b>
-              <PlacesSorting activeSort={PlaceSortingEnum.Popular} />
+              <PlacesSorting activeSort={useAppSelector(selectSortingParameter)} />
               <div className="cities__places-list places__list tabs__content">
-                {offers.map((offer) => (
+                {sortedOffers.map((offer) => (
                   <CitiesCard
                     key={offer.id}
                     offer={offer}
@@ -57,7 +67,7 @@ function Main({ settings, offers }: MainProps) {
               <Map
                 className="cities__map"
                 city={city}
-                offers={offers}
+                offers={sortedOffers}
                 hoveredOfferId={selectedOfferCardId}
               />
             </div>
