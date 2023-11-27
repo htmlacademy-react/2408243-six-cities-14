@@ -7,9 +7,9 @@ import { useState } from 'react';
 
 type CitiesListProps = {
   offers: OfferType[];
-}
+};
 
-function CitiesList({offers}: CitiesListProps) {
+function CitiesList({ offers }: CitiesListProps) {
   const currentCity = useAppSelector((store) => store.currentCity);
   const activeSort = useAppSelector(selectSortingParameter);
 
@@ -29,9 +29,7 @@ function CitiesList({offers}: CitiesListProps) {
           <b className="places__found">
             {offers.length} places to stay in {currentCity}
           </b>
-          <PlacesSorting
-            activeSort={activeSort}
-          />
+          <PlacesSorting activeSort={activeSort} />
           <div className="cities__places-list places__list tabs__content">
             {offers.map((offer) => (
               <CitiesCard

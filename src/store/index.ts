@@ -10,4 +10,5 @@ export type State = ReturnType<typeof store.getState>;
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 export const useAppSelector: TypedUseSelectorHook<State> = useSelector;
 export const selectSortingParameter = (state: State) => state.placeSorting;
-export const currentOffersByCity = (state: State) => state.offers.filter((offer) => offer.city.name === state.currentCity);
+export const currentOffersByCity = (state: State) =>
+  state.offers.filter((offer) => offer.city.name === state.currentCity);

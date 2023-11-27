@@ -1,8 +1,4 @@
-import {
-  Header,
-  Page,
-  SectionContainer,
-} from '../../components/common';
+import { Header, Page, SectionContainer } from '../../components/common';
 import { MainMenu, CitiesList } from '../../components/main';
 import { Amsterdam } from '../../constants';
 import { OfferType } from '../../types';
@@ -12,7 +8,7 @@ function Main() {
   const currentSortOption = useAppSelector((store) => store.placeSorting);
   const currentCityOffers: OfferType[] = useAppSelector(currentOffersByCity);
   const sortingOffers: { [key: string]: OfferType[] } = {
-    'Popular': currentCityOffers,
+    Popular: currentCityOffers,
     'Price: low to high': [...currentCityOffers].sort(
       (a, b) => a.price - b.price
     ),
@@ -35,7 +31,7 @@ function Main() {
             <MainMenu activeCity={Amsterdam} />
           </SectionContainer>
         </div>
-        <CitiesList offers={sortedOffers}/>
+        <CitiesList offers={sortedOffers} />
       </Page>
     </div>
   );

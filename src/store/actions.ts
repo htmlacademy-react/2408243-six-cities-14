@@ -4,4 +4,5 @@ import { PlaceSortingEnum } from '../enums';
 
 export const currentCityAction = createAction<string>('currentCity');
 export const updateOffersAction = createAction<OfferType[]>('updateOffers');
-export const placeSortingAction = createAction<PlaceSortingEnum>('placeSorting');
+export const placeSortingAction =
+  createAction<PlaceSortingEnum>('placeSorting');
