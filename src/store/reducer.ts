@@ -1,6 +1,10 @@
-import {createReducer } from '@reduxjs/toolkit';
+import { createReducer } from '@reduxjs/toolkit';
 
-import { currentCityAction, placeSortingAction, updateOffersAction } from './actions';
+import {
+  currentCityAction,
+  placeSortingAction,
+  updateOffersAction,
+} from './actions';
 import { offers } from '../mocks/offer';
 import { Amsterdam } from '../constants';
 import { OfferType } from '../types';
@@ -30,6 +34,5 @@ const reducer = createReducer(initialState, (builder) => {
       state.placeSorting = action.payload;
     });
 });
-
 
 export default reducer;

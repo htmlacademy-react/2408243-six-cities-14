@@ -14,11 +14,7 @@ export const App = ({ offers, reviews }: AppProps) => (
   <HelmetProvider>
     <BrowserRouter>
       <Routes>
-        <Route
-          index
-          path={Routers.Main}
-          element={<Main/>}
-        />
+        <Route index path={Routers.Main} element={<Main />} />
         <Route
           path={Routers.Favorites}
           element={
