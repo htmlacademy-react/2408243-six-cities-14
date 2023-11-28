@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { App } from './components/App';
 import Setting from './types/Setting';
 import { offers } from './mocks/offer';
+import { reviews } from './mocks/review';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,6 +15,6 @@ const Settings: Setting = {
 
 root.render(
   <React.StrictMode>
-    <App settings={Settings} offers={offers} />
+    <App settings={Settings} offers={offers} reviews={reviews} />
   </React.StrictMode>
 );
