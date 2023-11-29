@@ -2,8 +2,9 @@ import { OfferType } from '../../../types';
 import { CitiesCard, PlacesSorting } from '..';
 import { city } from '../../../mocks/cityMap';
 import { Container, Map } from '../../common';
-import { selectSortingParameter, useAppSelector } from '../../../store';
+import { useAppSelector } from '../../../store';
 import { useState } from 'react';
+import { selectSortingParameter } from '../../../store/selectors';
 
 type CitiesListProps = {
   offers: OfferType[];

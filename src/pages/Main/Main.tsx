@@ -8,16 +8,10 @@ function Main() {
   const currentSortOption = useAppSelector((store) => store.placeSorting);
   const currentCityOffers: OfferType[] = useAppSelector(currentOffersByCity);
   const sortingOffers: { [key: string]: OfferType[] } = {
-    Popular: currentCityOffers,
-    'Price: low to high': [...currentCityOffers].sort(
-      (a, b) => a.price - b.price
-    ),
-    'Price: high to low': [...currentCityOffers].sort(
-      (a, b) => b.price - a.price
-    ),
-    'Top rated first': [...currentCityOffers].sort(
-      (a, b) => b.rating - a.rating
-    ),
+    'Popular': currentCityOffers,
+    'Price: low to high': [...currentCityOffers].sort((a, b) => a.price - b.price),
+    'Price: high to low': [...currentCityOffers].sort((a, b) => b.price - a.price),
+    'Top rated first': [...currentCityOffers].sort((a, b) => b.rating - a.rating),
   };
   const sortedOffers = sortingOffers[currentSortOption];
 

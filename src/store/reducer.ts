@@ -1,7 +1,7 @@
 import { createReducer } from '@reduxjs/toolkit';
 
 import {
-  currentCityAction,
+  updateCurrentCityAction,
   placeSortingAction,
   updateOffersAction,
 } from './actions';
@@ -24,7 +24,7 @@ const initialState: initialStateType = {
 
 const reducer = createReducer(initialState, (builder) => {
   builder
-    .addCase(currentCityAction, (state, action) => {
+    .addCase(updateCurrentCityAction, (state, action) => {
       state.currentCity = action.payload;
     })
     .addCase(updateOffersAction, (state, action) => {
