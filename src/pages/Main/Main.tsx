@@ -1,30 +1,26 @@
-import { useState } from 'react';
-import {
-  Header,
-  Page,
-  SectionContainer,
-  Container,
-  Map,
-} from '../../components/common';
-import { MainMenu, PlacesSorting, CitiesCard } from '../../components/main';
+import { Header, Page, SectionContainer } from '../../components/common';
+import { MainMenu, CitiesList } from '../../components/main';
 import { Amsterdam } from '../../constants';
-import { PlaceSortingEnum } from '../../enums';
-import { OfferType, Setting } from '../../types';
-import { city } from '../../mocks/cityMap';
+import { OfferType } from '../../types';
+import { currentOffersByCity, useAppSelector } from '../../store';
 
-type MainProps = {
-  offers: OfferType[];
-  settings: Setting;
-};
+function Main() {
+  const currentSortOption = useAppSelector((store) => store.placeSorting);
+  const currentCityOffers: OfferType[] = useAppSelector(currentOffersByCity);
+  const sortingOffers: { [key: string]: OfferType[] } = {
+    Popular: currentCityOffers,
+    'Price: low to high': [...currentCityOffers].sort(
+      (a, b) => a.price - b.price
+    ),
+    'Price: high to low': [...currentCityOffers].sort(
+      (a, b) => b.price - a.price
+    ),
+    'Top rated first': [...currentCityOffers].sort(
+      (a, b) => b.rating - a.rating
+    ),
+  };
+  const sortedOffers = sortingOffers[currentSortOption];
 
-function Main({ settings, offers }: MainProps) {
-  const [selectedOfferCardId, setSelectedOfferCardId] = useState<number | null>(
-    null
-  );
-
-  function handleMouseMove(offerId: number | null) {
-    setSelectedOfferCardId(offerId);
-  }
   return (
     <div className="page page--gray page--main">
       <Header />
@@ -35,34 +31,7 @@ function Main({ settings, offers }: MainProps) {
             <MainMenu activeCity={Amsterdam} />
           </SectionContainer>
         </div>
-        <div className="cities">
-          <Container className="cities__places-container">
-            <section className="cities__places places">
-              <h2 className="visually-hidden">Places</h2>
-              <b className="places__found">
-                {settings.offersCount} places to stay in Amsterdam
-              </b>
-              <PlacesSorting activeSort={PlaceSortingEnum.Popular} />
-              <div className="cities__places-list places__list tabs__content">
-                {offers.map((offer) => (
-                  <CitiesCard
-                    key={offer.id}
-                    offer={offer}
-                    cardHover={handleMouseMove}
-                  />
-                ))}
-              </div>
-            </section>
-            <div className="cities__right-section">
-              <Map
-                className="cities__map"
-                city={city}
-                offers={offers}
-                hoveredOfferId={selectedOfferCardId}
-              />
-            </div>
-          </Container>
-        </div>
+        <CitiesList offers={sortedOffers} />
       </Page>
     </div>
   );

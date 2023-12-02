@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Setting, OfferType, ReviewType } from '../types';
+import { OfferType, ReviewType } from '../types';
 import { HelmetProvider } from 'react-helmet-async';
 import { Main, Favorites, Login, Offer, NotFound } from '../pages';
 import { AuthorizationStatus, Routers } from '../enums';
@@ -7,19 +7,14 @@ import { ProtectedRoute } from './common';
 
 type AppProps = {
   offers: OfferType[];
-  settings: Setting;
   reviews: ReviewType[];
 };
 
-export const App = ({ settings, offers, reviews }: AppProps) => (
+export const App = ({ offers, reviews }: AppProps) => (
   <HelmetProvider>
     <BrowserRouter>
       <Routes>
-        <Route
-          index
-          path={Routers.Main}
-          element={<Main settings={settings} offers={offers} />}
-        />
+        <Route index path={Routers.Main} element={<Main />} />
         <Route
           path={Routers.Favorites}
           element={
