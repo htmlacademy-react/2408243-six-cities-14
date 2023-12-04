@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './components/App';
-import { offers } from './mocks/offer';
+// import { offers } from './mocks/offer';
 import { reviews } from './mocks/review';
 import { Provider } from 'react-redux';
 import { store } from './store';
@@ -13,7 +13,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App offers={offers} reviews={reviews} />
+      {/* <App offers={[]} reviews={reviews} /> */}
+      <App reviews={reviews} />
     </Provider>
   </React.StrictMode>
 );

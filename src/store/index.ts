@@ -1,8 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit';
 import reducer from './reducer';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import { createApi } from '../api';
 
-export const store = configureStore({ reducer });
+export const store = configureStore({
+  reducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      thunk: {
+        extraArgument: createApi
+      },
+    }),
+});
 
 type AppDispatch = typeof store.dispatch;
 export type State = ReturnType<typeof store.getState>;

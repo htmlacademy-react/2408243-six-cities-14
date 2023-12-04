@@ -5,4 +5,8 @@ enum Routers {
   Offer = '/offer/:id',
 }
 
+export enum ApiRouter {
+  Offers = '/offers',
+}
+
 export default Routers;
